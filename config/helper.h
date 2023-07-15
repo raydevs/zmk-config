@@ -173,7 +173,6 @@
                 label = ZMK_HELPER_STRINGIFY(UC_MACRO_##name);                                   \
                 wait - ms = <0>;                                                                 \
                 tap - ms = <0>;                                                                  \
-                #binding - cells = <0>;                                                          \
                 bindings = <OS_UNICODE_LEAD>, <&macro_tap unicode_bindings>, <OS_UNICODE_TRAIL>; \
             };                                                                                   \
         };                                                                                       \
@@ -189,7 +188,6 @@
             {                                                  \
                 compatible = "zmk,behavior-mod-morph";         \
                 label = ZMK_HELPER_STRINGIFY(UC_MORPH_##name); \
-                #binding - cells = <0>;                        \
                 bindings = <uc_binding>, <shifted_uc_binding>; \
                 mods = <(MOD_LSFT | MOD_RSFT)>;                \
             };                                                 \
