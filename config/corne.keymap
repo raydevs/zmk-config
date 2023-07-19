@@ -4,7 +4,7 @@
 /* map Zen's extra keys */
 #define X_LT  &kp TAB       // top row, left
 #define X_LM  &kp CAPS      // middle row, left
-#define X_LB  &kp &n_tilde  // bottom row, left
+#define X_LB  &n_tilde  // bottom row, left
 #define X_LH  &smart_mouse  // thumb row, left
 
 #define X_RT  &bs_del       // top row, right
