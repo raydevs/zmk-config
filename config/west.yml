@@ -2,11 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: jyojoh
-      url-base: https://github.com/jyojoh
+    - name: preceptorXS
+      url-base: https://github.com/preceptorXS
   projects:
     - name: zmk
-      remote: jyojoh
+      remote: preceptorXS
       revision: main
       import: app/west.yml
   self:
