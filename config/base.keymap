@@ -239,6 +239,10 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
+
+ZMK_UNICODE_PAIR(n_tilde,      N0, N0,  F, N1,    N0, N0,  D, N1)
+
+
 ZMK_LAYER(base,
 //╭──────────┼─────────────┬─────────────┬──────────────┬───────────────┬─────────────╮  ╭─────────────┬──────────────┬──────────────┬─────────────┬───────────────┬──────────╮
     &kp TAB    &kp Q         &kp W         &kp E          &kp R           &kp T            &kp Y         &kp U          &kp I          &kp O         &kp P           &bs_del 
