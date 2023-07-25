@@ -239,41 +239,43 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
-
 ZMK_UNICODE_PAIR(n_tilde,      N0, N0,  F, N1,    N0, N0,  D, N1)
 
-macros {
-  #define OS_LEAD  &kp RALT &kp U  // OS specific sequence to initialize unicode
-  #define OS_TRAIL &kp RET         // OS specific sequence to terminate unicode
+/{\
+    macros { \
+        #define OS_LEAD  &kp RALT &kp U \ // OS specific sequence to initialize unicode
+        #define OS_TRAIL &kp RET        \ // OS specific sequence to terminate unicode
 
-  ntil: ntil {  // n-tilde
-    wait-ms = <5>;
-    tap-ms = <5>;
-    compatible = "zmk,behavior-macro";
-    label = "UC_NTIL_CAP";
-    #binding-cells = <0>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp D &kp 1 OS_TRAIL>;
-  }
+        ntil: ntil { \ // n-tilde
+            wait-ms = <5>; \
+            tap-ms = <5>; \
+            compatible = "zmk,behavior-macro"; \
+            label = "UC_NTIL_CAP"; \
+            #binding-cells = <0>; \
+            bindings = <OS_LEAD &kp 0 &kp 0 &kp D &kp 1 OS_TRAIL>; \
+        }; \
 
-  ntil_cap: ntil_cap {  // capital n-tilde
-    wait-ms = <5>;
-    tap-ms = <5>;
-    compatible = "zmk,behavior-macro";
-    label = "UC_NTIL";
-    #binding-cells = <0>;
-    bindings = <OS_LEAD &kp 0 &kp 0 &kp F &kp 1 OS_TRAIL>;
-  }
-}
-
-behaviors {
-  uc_ntil: uc_ntil {  // tap yields n-tilde, shift-tap yields capital n-tilde
-    compatible = "zmk,behavior-mod-morph";
-    label = "UC_NTIL";
-    #binding-cells = <0>;
-    bindings = <&ntil>, <&ntil_cap>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    masked_mods = <(MOD_LSFT|MOD_RSFT)>;  // requires PR #1114 
-  };
+        ntil_cap: ntil_cap { \  // capital n-tilde
+            wait-ms = <5>; \
+            tap-ms = <5>; \
+            compatible = "zmk,behavior-macro"; \
+            label = "UC_NTIL"; \
+            #binding-cells = <0>; \
+            bindings = <OS_LEAD &kp 0 &kp 0 &kp F &kp 1 OS_TRAIL>; \
+        }; \
+    }; \
+};
+/ { \
+    behaviors { \
+        uc_ntil: uc_ntil { \  // tap yields n-tilde, shift-tap yields capital n-tilde
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "UC_NTIL"; \
+            #binding-cells = <0>; \
+            bindings = <&ntil>, <&ntil_cap>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \ // requires PR #1114 
+        }; \
+    }; \
 };
 
 
