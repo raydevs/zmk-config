@@ -241,7 +241,7 @@ ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_UNICODE_PAIR(n_tilde,      N0, N0,  F, N1,    N0, N0,  D, N1)
 
-/{\
+/ { \
     macros { \
         #define OS_LEAD  &kp RALT &kp U \ // OS specific sequence to initialize unicode
         #define OS_TRAIL &kp RET        \ // OS specific sequence to terminate unicode
