@@ -1,8 +1,6 @@
 /* source keypos definitions */
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-#define HOST_OS 0
-
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
 
