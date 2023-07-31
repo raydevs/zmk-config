@@ -126,7 +126,7 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
 // replace a/o/u/s with German umlauts when NAV and NUM are held jointly
-ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
+// ZMK_CONDITIONAL_LAYER(NAV NUM, GER)
 
 ZMK_UNICODE_PAIR(n_tilde,      N0, N0,  F, N1,    N0, N0,  D, N1)
 
