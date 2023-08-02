@@ -246,9 +246,9 @@ ZMK_LAYER(base,
 //├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
     &kp TAB    &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHFT F    &kp G            &kp H         &hml RSHFT J     &hml RCTRL K   &hml RALT L   &hml RGUI SQT   &kp RET 
 //├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
-    &copy_cut  &kp Z         &kp X         &kp C          &kp V           &kp B            &kp N         &kp M            &kp COMMA      &kp DOT       &mt GT LT       &mt UNDER MINUS
+    &copy_cut  &kp Z         &kp X         &kp C          &kp V           &kp B            &kp N         &kp M            &kp COMMA      &kp DOT       &kp GRAVE      &kp MINUS
 //╰──────────┤─────────────┼─────────────┴──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┴─────────────┴───────────────┴──────────╯
-                                           &smart_mouse   &smart_shft     &lt_spc NAV 0    SMART_NUM      &lt FN BSLH     &kp SEMI                                           
+                                           &smart_mouse   &smart_shft     &lt_spc NAV 0    SMART_NUM      &lt FN SLASH     &kp SEMI                                           
 //                                       ╰──────────────┴───────────────┴─────────────╯  ╰─────────────┴────────────────┴──────────────╯  
 )
 
