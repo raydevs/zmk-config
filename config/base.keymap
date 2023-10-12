@@ -237,7 +237,11 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS¨
+
+
+// equivalences
+#define EQ_MINUS FSLH
 
 
 ZMK_LAYER(base,
@@ -246,9 +250,9 @@ ZMK_LAYER(base,
 //├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
     &kp LSHFT  &hml LGUI A   &hml LALT S   &hml LCTRL D   &kp F           &kp G            &kp H         &hml RSHFT J     &hml RCTRL K   &hml RALT L   &hml RGUI SQT   &copy_cut 
 //├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
-    SMART_NUM  &kp Z         &kp X         &kp C          &kp V           &kp B            &kp N         &kp M            &kp COMMA      &kp DOT       &kp GRAVE      &lt TILDE2 ESC
+    SMART_NUM  &kp Z         &kp X         &kp C          &kp V           &kp B            &kp N         &kp M            &kp COMMA      &kp DOT       &kp GRAVE      &lt TILDE ESC
 //╰──────────┤─────────────┼─────────────┴──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┴─────────────┴───────────────┴──────────╯
-                                           &smart_mouse   &smart_shft     &kp RET          &lt_spc NAV 0 &lt FN MINUS     &kp SEMI                                           
+                                           &smart_mouse   &smart_shft     &kp RET          &lt_spc NAV 0 &lt FN EQ_MINUS  &kp SEMI                                           
 //                                       ╰──────────────┴───────────────┴─────────────╯  ╰─────────────┴────────────────┴──────────────╯  
 )
 
@@ -282,7 +286,7 @@ ZMK_LAYER(num,
 //├──────────┼──────────────┼──────────────┼────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┼────────────────┼─────────────┼──────────┤
     ___        &kp CARET      &kp AMPS       &kp LPAR         &kp RPAR        &kp UNDER     &hml LSHFT N4  &hml LCTRL N5  &hml LALT N6   &hml RGUI PLUS   &kp BSLH      &kp GRAVE
 //├──────────┼──────────────┼──────────────┼────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┼────────────────┼─────────────┼──────────┤
-    ___        &kp EQUAL      &kp LBKT       &kp RBKT         &kp RBRC        &kp LBRC      &kp N1         &kp N2         &kp N3         &kp KP_MULTIPLY  &kp PIPE2      &kp TILDE
+    ___        &kp EQUAL      &kp LBKT       &kp RBKT         &kp RBRC        &kp LBRC      &kp N1         &kp N2         &kp N3         &kp KP_MULTIPLY  &kp PIPE      &kp TILDE
 //╰──────────┴──────────────┴──────────────┴────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┴────────────────┴─────────────┴──────────╯
                                              ___              ___             ___           ___            &kp N0         &kp KP_DOT            
 //                                         ╰────────────────┴───────────────┴──────────╯  ╰──────────────┴──────────────┴──────────────╯
