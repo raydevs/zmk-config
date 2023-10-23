@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   base:
-  - TAB
+  - ESC
   - Q
   - W
   - E
@@ -17,14 +17,14 @@ layers:
   - {t: A, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LCTRL}
-  - F
+  - {t: F, h: LSHIFT}
   - G
   - H
   - {t: J, h: RSHFT}
   - {t: K, h: RCTRL}
   - {t: L, h: RALT}
   - {t: '''', h: RGUI}
-  - '&copy_cut'
+  - ;
   - {t: '&num_dance', h: num}
   - Z
   - X
@@ -33,8 +33,8 @@ layers:
   - B
   - N
   - M
-  - ','
-  - .
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
   - '`'
   - ESC
   - '&smart_mouse'
@@ -42,7 +42,7 @@ layers:
   - RET
   - {t: SPACE, h: nav, s: '&dot_spc'}
   - {t: '-', h: fn}
-  - ;
+  - '&copy_cut'
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -76,7 +76,7 @@ layers:
   - {t: ▽, type: trans}
   - INS
   - TAB
-  - <
+  - ':'
   - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: PP, type: held}
   - {t: ▽, type: trans}
   num:
-  - '@'
+  - {t: ▽, type: trans}
   - '!'
   - '@'
   - '#'
