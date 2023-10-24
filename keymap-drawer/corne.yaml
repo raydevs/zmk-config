@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   base:
-  - ESC
+  - LSHIFT
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: BSPC, s: DEL}
-  - LSHFT
+  - TAB
   - {t: A, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LCTRL}
@@ -24,7 +24,7 @@ layers:
   - {t: K, h: RCTRL}
   - {t: L, h: RALT}
   - {t: '''', h: RGUI}
-  - ;
+  - {t: '&n_tilde_lower', s: '&n_tilde_upper'}
   - {t: '&num_dance', h: num}
   - Z
   - X
@@ -76,7 +76,7 @@ layers:
   - {t: ▽, type: trans}
   - INS
   - TAB
-  - ':'
+  - <
   - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
