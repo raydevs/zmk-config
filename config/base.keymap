@@ -1,3 +1,4 @@
+#include "keys_es.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #if CONFIG_WIRELESS
@@ -121,7 +122,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 )
 &num_word {  // num-word, requires PR #1451
     layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+    continue-list = <BSPC DEL ES_DOT ES_COMMA ES_PLUS MINUS ES_STAR ES_FSLH ES_EQUAL>;
 };
 
 // smart-mouse, requires PR #1366
@@ -157,26 +158,26 @@ ZMK_BEHAVIOR(uc_shift, macro,
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
 ZMK_BEHAVIOR(comma_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp COMMA>, <&comma_inner_morph>;
+    bindings = <&kp ES_COMMA>, <&comma_inner_morph>;
 )
 ZMK_BEHAVIOR(comma_inner_morph, mod_morph,
-    bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+    bindings = <&kp ES_SEMICOLON>, <&kp ES_LESS_THAN>;
     mods = <(MOD_LCTL|MOD_RCTL)>;
 )
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
 ZMK_BEHAVIOR(dot_morph, mod_morph,
-    bindings = <&kp DOT>, <&dot_inner_morph>;
+    bindings = <&kp ES_DOT>, <&dot_inner_morph>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 ZMK_BEHAVIOR(dot_inner_morph, mod_morph,
-    bindings = <&kp COLON>, <&kp GREATER_THAN>;
+    bindings = <&kp ES_COLON>, <&kp ES_GREATER_THAN>;
     mods = <(MOD_LCTL|MOD_RCTL)>;
 )
 
 // tap: qmark | shift + tap: excl
 ZMK_BEHAVIOR(qexcl, mod_morph,
-    bindings = <&kp QMARK>, <&kp EXCL>;
+    bindings = <&kp ES_QMARK>, <&kp ES_EXCL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
@@ -194,7 +195,7 @@ ZMK_BEHAVIOR(spc_morph, mod_morph,
 ZMK_BEHAVIOR(dot_spc, macro,
     wait-ms = <0>;
     tap-ms = <5>;
-    bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+    bindings = <&kp ES_DOT &kp SPACE &sk LSHFT>;
 )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
@@ -212,21 +213,21 @@ ZMK_BEHAVIOR(lpar_lt, mod_morph,
 
 // tap: right-parenthesis | shft + tap: greater-than
 ZMK_BEHAVIOR(rpar_gt, mod_morph,
-    bindings = <&kp RPAR>, <&kp GT>;
+    bindings = <&kp ES_RPAR>, <&kp ES_GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // tap: copy | double-tap: cut
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
+    bindings = <&kp LC(INS)>, <&kp LC(ES_X)>;
 )
 
 // Windows sleep key
 ZMK_BEHAVIOR(win_sleep, macro,
     wait-ms = <500>;
     tap-ms = <50>;
-    bindings = <&kp LG(X) &kp U &kp S>;
+    bindings = <&kp LG(ES_X) &kp ES_U &kp ES_S>;
 )
 
 // misc aliases
@@ -239,19 +240,17 @@ ZMK_BEHAVIOR(win_sleep, macro,
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
-ZMK_UNICODE_PAIR(n_tilde,      N0, N0,  F, N1,    N0, N0,  D, N1)
-
 
 ZMK_LAYER(base,
-//╭──────────┼─────────────┬─────────────┬──────────────┬───────────────┬─────────────╮  ╭─────────────┬────────────────┬──────────────┬─────────────┬───────────────┬──────────╮
-    &kp LSHIFT &kp Q         &kp W         &kp E          &kp R           &kp T            &kp Y         &kp U            &kp I          &kp O         &kp P           &bs_del 
-//├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
-    &kp TAB    &hml LGUI A   &hml LALT S   &hml LCTRL D   &hml LSHIFT F   &kp G            &kp H         &hml RSHFT J     &hml RCTRL K   &hml RALT L   &hml RGUI SQT   &n_tilde
-//├──────────┼─────────────┼─────────────┼──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
-    SMART_NUM  &kp Z         &kp X         &kp C          &kp V           &kp B            &kp N         &kp M            &comma_morph   &dot_morph      &kp GRAVE     &kp ESC
-//╰──────────┤─────────────┼─────────────┴──────────────┼───────────────┼─────────────┤  ├─────────────┼────────────────┼──────────────┴─────────────┴───────────────┴──────────╯
-                                           &smart_mouse   &smart_shft     &kp RET          &lt_spc NAV 0 &lt FN MINUS     &copy_cut                                           
-//                                       ╰──────────────┴───────────────┴─────────────╯  ╰─────────────┴────────────────┴──────────────╯  
+//╭──────────┼───────────────┬───────────────┬────────────────┬─────────────────┬───────────────╮  ╭─────────────┬────────────────┬──────────────┬─────────────┬───────────────┬──────────╮
+    &kp LSHIFT &kp ES_Q        &kp ES_W        &kp ES_E         &kp ES_R          &kp ES_T           &kp ES_Y      &kp ES_U         &kp ES_I       &kp ES_O      &kp ES_P        &bs_del 
+//├──────────┼───────────────┼───────────────┼────────────────┼─────────────────┼───────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
+    &kp TAB    &hml LGUI ES_A  &hml LALT ES_S  &hml LCTRL ES_D  &hml LSHIFT ES_F  &kp ES_G           &kp ES_H      &hml RSHFT ES_J  &hml RCTRL ES_K   &hml RALT ES_L   &hml RGUI ES_SQT   &n_tilde
+//├──────────┼───────────────┼───────────────┼────────────────┼─────────────────┼───────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
+    SMART_NUM  &kp ES_Z        &kp ES_X        &kp ES_C         &kp ES_V          &kp ES_B           &kp ES_N      &kp ES_M         &comma_morph   &dot_morph    &kp ES_GRAVE    &kp ESC
+//╰──────────┴───────────────┴───────────────┴────────────────┴─────────────────┴───────────────┤  ├─────────────┼────────────────┼──────────────┴─────────────┴───────────────┴──────────╯
+                                               &smart_mouse     &smart_shft       &kp RET           &lt_spc NAV 0  &lt FN ES_MINUS    &copy_cut                                           
+//                                           ╰────────────────┴─────────────────┴───────────────╯  ╰─────────────┴────────────────┴──────────────╯  
 )
 
 ZMK_LAYER(nav,
@@ -260,7 +259,7 @@ ZMK_LAYER(nav,
 //├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
     ___     &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     ___              &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     ___             ___
 //├──────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼────────┤
-    ___     ___           ___           ___           ___           ___              &kp INS       &kp TAB       &kp LT        &kp GT        ___             ___
+    ___     ___           ___           ___           ___           ___              &kp INS       &kp TAB       &kp ES_LT     &kp ES_GT        ___             ___
 //╰──────┴─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴────────╯
                                         ___           ___           ___               ___           CANCEL       ___                                             
 //                                   ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯                                    
@@ -280,13 +279,13 @@ ZMK_LAYER(fn,
 
 ZMK_LAYER(num,
 //╭──────────┬──────────────┬──────────────┬────────────────┬───────────────┬──────────╮  ╭──────────────┬──────────────┬──────────────┬────────────────┬─────────────┬──────────╮
-    ___        &kp EXCL       &kp AT         &kp HASH         &kp DLLR        &kp PRCNT     &kp N7         &kp N8         &kp N9         &kp MINUS        ___           ___
+    ___        &kp ES_EXCL       &kp ES_AT         &kp ES_HASH         &kp ES_DLLR        &kp ES_PRCNT     &kp ES_N7         &kp ES_N8         &kp ES_N9         &kp ES_MINUS        ___           ___
 //├──────────┼──────────────┼──────────────┼────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┼────────────────┼─────────────┼──────────┤
-    ___        &kp CARET      &kp AMPS       &kp LPAR         &kp RPAR        &kp UNDER     &hml LSHFT N4  &hml LCTRL N5  &hml LALT N6   &hml RGUI PLUS   &kp BSLH      &kp GRAVE
+    ___        &kp ES_CARET      &kp ES_AMPS       &kp ES_LPAR         &kp ES_RPAR        &kp ES_UNDER     &hml LSHFT ES_N4  &hml LCTRL ES_N5  &hml LALT ES_N6   &hml RGUI ES_PLUS   &kp ES_BSLH    &kp ES_GRAVE
 //├──────────┼──────────────┼──────────────┼────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┼────────────────┼─────────────┼──────────┤
-    ___        &kp EQUAL      &kp LBKT       &kp RBKT         &kp RBRC        &kp LBRC      &kp N1         &kp N2         &kp N3         &kp KP_MULTIPLY  &kp PIPE      &kp TILDE
+    ___        &kp ES_EQUAL      &kp ES_LBKT       &kp ES_RBKT         &kp ES_RBRC        &kp ES_LBRC      &kp ES_N1         &kp ES_N2    &kp ES_N3     &kp KP_MULTIPLY  &kp ES_PIPE      &kp ES_TILDE
 //╰──────────┴──────────────┴──────────────┴────────────────┼───────────────┼──────────┤  ├──────────────┼──────────────┼──────────────┴────────────────┴─────────────┴──────────╯
-                                             ___              ___             ___           ___            &kp N0         &kp KP_DOT            
+                                             ___              ___             ___           ___            &kp ES_N0         &kp KP_DOT            
 //                                         ╰────────────────┴───────────────┴──────────╯  ╰──────────────┴──────────────┴──────────────╯
 )
 

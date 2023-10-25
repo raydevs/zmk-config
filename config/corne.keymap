@@ -5,4 +5,4 @@
 #define CONFIG_WIRELESS 1
 
 /* source the main keymap */
-#include "base_es.keymap"
+#include "base.keymap"
