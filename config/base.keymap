@@ -228,7 +228,7 @@ ZMK_LAYER(base,
 //├───────────┼──────────────┼──────────────┼───────────────┼────────────────┼──────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
     &kp LSHIFT  &hml LGUI ES_A &hml LALT ES_S &hml LCTRL ES_D &hml LSHIFT ES_F &kp ES_G          &kp ES_H      &hml RSHFT ES_J  &hml RCTRL ES_K &hml RALT ES_L &hml RGUI ES_ACUTE   &kp RET 
 //├───────────┼──────────────┼──────────────┼───────────────┼────────────────┼──────────────┤  ├─────────────┼────────────────┼──────────────┼─────────────┼───────────────┼──────────┤
-    SMART_NUM   &kp ES_Z        &kp ES_X       &kp ES_C        &kp ES_V        &kp ES_B         &kp ES_N      &kp ES_M         &comma_morph   &dot_morph    &kp ES_GRAVE     &kp ES_NTIL
+    SMART_NUM   &kp ES_Z        &kp ES_X       &kp ES_C        &kp ES_V        &kp ES_B         &kp ES_N      &kp ES_M         &comma_morph   &dot_morph    &kp ES_GRAVE     &kp ES_N_TILDE
 //╰───────────┤──────────────┼──────────────┴───────────────┼────────────────┼──────────────┤  ├─────────────┼────────────────┼──────────────┴─────────────┴───────────────┴──────────╯
                                               &smart_mouse    &kp TAB         &lt_spc FN 0       &lt_spc NUM 0 &smart_shft      &copy_cut                                           
 //                                          ╰───────────────┴────────────────┴──────────────╯  ╰─────────────┴────────────────┴──────────────╯  
