@@ -39,8 +39,8 @@ layers:
   - ES NTIL
   - '&smart_mouse'
   - TAB
-  - {t: SPACE, h: fn, s: '&dot_spc'}
-  - {t: SPACE, h: num, s: '&dot_spc'}
+  - {t: '&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SPACEBAR))', h: fn, s: '&dot_spc'}
+  - {t: '&kp (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SPACEBAR))', h: num, s: '&dot_spc'}
   - {t: LSHFT, h: sticky, s: '&caps_word'}
   - '&copy_cut'
   num:
