@@ -46,7 +46,7 @@ ZMK_COMBO(rbkt,  &kp ES_RBKT,      RB2 RB3,     DEF     NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lbrc,  &kp ES_LBRC,      RB1 RB2,         NAV    , COMBO_TERM_FAST)
 ZMK_COMBO(rbrc,  &kp ES_RBRC,      RB2 RB3,         NAV    , COMBO_TERM_FAST)
 
-ZMK_COMBO(cpgrk, &sls 0,        RT1 RT2 RT3, DEF NAV NUM, COMBO_TERM_SLOW)
+//ZMK_COMBO(cpgrk, &sls 0,        RT1 RT2 RT3, DEF NAV NUM, COMBO_TERM_SLOW)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(at,    &kp ES_AT,        LT3 LM3,     DEF NAV NUM, COMBO_TERM_SLOW)
