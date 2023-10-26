@@ -246,9 +246,6 @@ combos:
 - p: [32, 33]
   k: '&kp ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
   l: [base, num]
-- p: [7, 8, 9]
-  k: '&sls'
-  l: [base, num]
 - p: [2, 14]
   k: '&kp ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))))'
   l: [base, num]
