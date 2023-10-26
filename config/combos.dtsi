@@ -42,8 +42,6 @@ ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     DEF     NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lbkt,  &kp ES_LBKT,      RB1 RB2,     DEF     NUM, COMBO_TERM_FAST)
 ZMK_COMBO(rbkt,  &kp ES_RBKT,      RB2 RB3,     DEF     NUM, COMBO_TERM_FAST)
 
-ZMK_COMBO(cpgrk, &sls 0,        RT1 RT2 RT3, DEF NUM, COMBO_TERM_SLOW)
-
 /* Vertical combos - left hand */
 ZMK_COMBO(at,    &kp ES_AT,        LT3 LM3,     DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(hash,  &kp ES_HASH,      LT2 LM2,     DEF NUM, COMBO_TERM_SLOW)
