@@ -26,21 +26,23 @@
 // ZMK_COMBO(mouse, &smart_mouse,  LT3 LT1,     DEF NUM, COMBO_TERM_SLOW)
 
 // ZMK_COMBO(tab,   HRC_TAB,       LM3 LM2,     DEF NUM, COMBO_TERM_FAST)
-ZMK_COMBO(repeat,HRC_REPEAT,    LM2 LM1,     DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(repeat,HRC_REPEAT,       LM2 LM1,      DEF NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(cut,   &kp LC(ES_X),     LB3 LB1,     DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2,     DEF NUM, COMBO_TERM_FAST)
-ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1,     DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(copy,  &kp LC(INS),      LB3 LB2,     DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(paste, &kp LS(INS),      LB2 LB1,     DEF NUM, COMBO_TERM_FAST)
 
 /* Horizontal combos - right hand */
-ZMK_COMBO(bspc,  &kp BSPC,      RT1 RT2,     DEF NUM, COMBO_TERM_FAST)
-ZMK_COMBO(del,   &kp DEL,       RT2 RT3,     DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(bspc,  &kp BSPC,         RT1 RT2,     DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO(del,   &kp DEL,          RT2 RT3,     DEF NUM, COMBO_TERM_FAST)
 
-ZMK_COMBO(lpar,  HRC_LPAR,      RM1 RM2,     DEF     NUM, COMBO_TERM_FAST)
-ZMK_COMBO(rpar,  HRC_RPAR,      RM2 RM3,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(lpar,  HRC_LPAR,         RM1 RM2,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(rpar,  HRC_RPAR,         RM2 RM3,     DEF     NUM, COMBO_TERM_FAST)
 
-ZMK_COMBO(lbkt,  &kp ES_LBKT,      RB1 RB2,     DEF     NUM, COMBO_TERM_FAST)
-ZMK_COMBO(rbkt,  &kp ES_RBKT,      RB2 RB3,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(lbkt,  &kp ES_LBKT,      RB0 RB1,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(rbkt,  &kp ES_RBKT,      RB1 RB2,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(lbrc,  &kp ES_LBRC,      RB2 RB3,     DEF     NUM, COMBO_TERM_FAST)
+ZMK_COMBO(rbrc,  &kp ES_RBRC,      RB3 RB4,     DEF     NUM, COMBO_TERM_FAST)
 
 /* Vertical combos - left hand */
 ZMK_COMBO(at,    &kp ES_AT,        LT3 LM3,     DEF NUM, COMBO_TERM_SLOW)
@@ -51,7 +53,7 @@ ZMK_COMBO(prcnt, &kp ES_PRCNT,     LT0 LM0,     DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(grave, &kp ES_GRAVE,     LM3 LB3,     DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(bslh,  &kp ES_BSLH,      LM2 LB2,     DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(equal, &kp ES_EQUAL,     LM1 LB1,     DEF NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(tilde, &kp ES_TILDE,     LM0 LB0,     DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(tilde, &kp ES_C_CEDILLA, LM0 LB0,     DEF NUM, COMBO_TERM_SLOW)
 
 /* Vertical combos - right hand */
 ZMK_COMBO(caret, &kp ES_CARET,     RT0 RM0,     DEF NUM, COMBO_TERM_SLOW)
